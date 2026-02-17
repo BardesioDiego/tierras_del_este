@@ -1324,7 +1324,11 @@ h1,  h2,  h3,  h4,  h5,  h6{
 }
 .gh{
   --tw-bg-opacity: 1;
-  background-color: rgb(78 107 255 / var(--tw-bg-opacity));
+  background-color: #bed589;
+}
+.gh:hover{
+  --tw-bg-opacity: 1;
+  background-color: #ccee7d;
 }
 .hh\/20{
   background-color: rgb(255 255 255 / 0.2);
@@ -1634,7 +1638,7 @@ h1,  h2,  h3,  h4,  h5,  h6{
 }
 .kk{
   --tw-text-opacity: 1;
-  color: rgb(24 28 49 / var(--tw-text-opacity));
+  color: #313d46;
 }
 .lk{
   --tw-text-opacity: 1;
@@ -1642,7 +1646,7 @@ h1,  h2,  h3,  h4,  h5,  h6{
 }
 .mk{
   --tw-text-opacity: 1;
-  color: rgb(78 107 255 / var(--tw-text-opacity));
+  color: #bed589;
 }
 .nk{
   --tw-text-opacity: 1 !important;
@@ -1809,9 +1813,12 @@ h1,  h2,  h3,  h4,  h5,  h6{
   fill: #181C31;
 }
 
+.xl {
+  color: #313d46;
+}
 .xl:hover{
   --tw-text-opacity: 1;
-  color: rgb(78 107 255 / var(--tw-text-opacity));
+  color: #bed589;
 }
 
 .yl:hover{
@@ -2585,3 +2592,131 @@ h1,  h2,  h3,  h4,  h5,  h6{
   }
 }
 
+/* Estilo para pantallas grandes (computadoras) */
+.titulo-horizontal {
+  white-space: nowrap;
+  font-size: 49px !important;
+  text-align: center;
+  width: 100%;
+}
+
+/* Estilo para pantallas pequeñas (Celulares - menos de 600px) */
+@media (max-width: 600px) {
+  .titulo-horizontal {
+    font-size: 28px !important; /* Achicamos la letra */
+    white-space: normal;       /* Permitimos que el texto use dos líneas si es necesario */
+    padding: 0 20px;           /* Un poco de aire a los lados */
+  }
+}
+/* Forzar el Grid responsivo */
+.grid-blog-nuevo {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+  gap: 30px !important;
+}
+
+/* Estilo de las Cards con movimiento */
+.custom-card-blog {
+  background: white;
+  border-radius: 15px !important;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  transition: all 0.4s ease-in-out;
+  position: relative;
+}
+
+.custom-card-blog:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.card-image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/10;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.custom-card-blog:hover img {
+  transform: scale(1.1);
+}
+
+/* Efecto de brillo al pasar el mouse */
+.overlay-efecto {
+  position: absolute;
+  top: 0; left: -100%;
+  width: 50%; height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.2), transparent);
+  transform: skewX(-25deg);
+  transition: 0.5s;
+}
+
+.custom-card-blog:hover .overlay-efecto {
+  left: 150%;
+}
+
+
+/* Contenedor principal del filtro */
+.catering-filter-container {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  padding: 10px 0;
+}
+
+/* Wrapper que permite el scroll horizontal en móviles */
+.catering-filter-wrapper {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto; /* Permite scroll */
+  padding-bottom: 15px;
+  scrollbar-width: none; /* Oculta scroll en Firefox */
+  -ms-overflow-style: none; /* Oculta scroll en IE */
+  justify-content: flex-start;
+}
+
+/* Ocultar barra de scroll en Chrome/Safari */
+.catering-filter-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Estilo base de los botones (Tabs) */
+.catering-tab {
+  white-space: nowrap; /* Evita que el texto se rompa en dos líneas */
+  padding: 12px 24px;
+  border-radius: 50px; /* Estilo píldora */
+  background: #f3f4f6;
+  color: #4b5563;
+  font-weight: 500;
+  border: 1px solid transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+/* Efecto hover */
+.catering-tab:hover {
+  background: #e5e7eb;
+  transform: translateY(-2px);
+}
+
+/* Clase activa (cuando está seleccionado) */
+.active-tab {
+  background: #111827 !important; /* Color oscuro moderno */
+  color: #ffffff !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajuste para pantallas grandes: centrar el menú */
+@media (min-width: 1024px) {
+  .catering-filter-wrapper {
+    justify-content: center;
+    overflow: visible;
+  }
+}
