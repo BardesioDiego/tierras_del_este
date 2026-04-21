@@ -1479,3 +1479,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	
 /******/ })()
 ;
+
+document.addEventListener('DOMContentLoaded', function () {
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,      // 1 foto en móviles
+    spaceBetween: 20,      // Espacio entre fotos
+    loop: false,           // DESACTIVADO para evitar el Warning
+    grabCursor: true,      // Permite arrastrar con el mouse
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      // De 640px en adelante: 2 fotos
+      640: {
+        slidesPerView: 2,
+      },
+      // De 1024px en adelante: 3 fotos
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+});

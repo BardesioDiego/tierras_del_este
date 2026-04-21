@@ -1638,7 +1638,7 @@ h1,  h2,  h3,  h4,  h5,  h6{
 }
 .kk{
   --tw-text-opacity: 1;
-  color: #313d46;
+  color: #bed589;
 }
 .lk{
   --tw-text-opacity: 1;
@@ -2375,6 +2375,7 @@ h1,  h2,  h3,  h4,  h5,  h6{
 
   .fq{
     width: 79%;
+    color: #ffffff;
   }
 
   .gq\/2{
@@ -2719,4 +2720,261 @@ h1,  h2,  h3,  h4,  h5,  h6{
     justify-content: center;
     overflow: visible;
   }
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.tierras-main-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Ocupa al menos el alto de la pantalla */
+    display: flex;
+    flex-direction: column;
+    /* CAMBIA LA RUTA DE ABAJO SI ES NECESARIO */
+    background-image: url('images/Header_tierras_del_este_salon_de_eventos_rocha.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll; /* Cambiar a 'fixed' si quieres efecto parallax */
+    overflow: hidden;
+}
+
+/* Capa oscura sobre la imagen */
+.tierras-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35); /* Ajusta el 0.35 si quieres más o menos oscuridad */
+    z-index: 1;
+}
+
+/* Contenedor de contenido para centrar y dar margen */
+.tierras-content-container {
+    position: relative;
+    z-index: 2; /* Por encima del overlay */
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+/* --- ESTILOS HERO --- */
+.tierras-hero {
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+
+.tierras-hero-inner {
+    max-width: 650px; /* Alinea el texto a la izquierda como la referencia */
+}
+
+.tierras-hero-title {
+    color: #B2D17D; /* Verde de la marca */
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.tierras-hero-text {
+    color: #ffffff;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Botón con margen superior corregido */
+.tierras-button-wrapper {
+    margin-top: 30px; 
+}
+
+.tierras-btn {
+    display: inline-block;
+    background-color: #B2D17D;
+    color: #3A4335 !important; /* Texto oscuro para contraste */
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.tierras-btn:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* --- ESTILOS FEATURES (ICONOS) --- */
+.tierras-features {
+    padding-bottom: 80px;
+    margin-top: auto; /* Empuja los iconos hacia el fondo de la imagen */
+}
+
+.tierras-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.tierras-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.tierras-icon-box {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid #B2D17D;
+    background: #bed589;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.tierras-icon-box img {
+    width: 30px;
+    height: 30px;
+}
+
+.tierras-text-box h4 {
+    color: #B2D17D;
+    font-size: 1.3rem;
+    margin: 0 0 8px 0;
+    font-weight: 700;
+}
+
+.tierras-text-box p {
+    color: #ffffff;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* --- RESPONSIVE (Móviles) --- */
+@media (max-width: 991px) {
+    .tierras-features-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .tierras-hero-title {
+        font-size: 2.5rem;
+    }
+    .tierras-content-container {
+        padding: 0 25px;
+    }
+}
+
+.titulo_about {
+    color: #313d46 !important;
+}
+
+.img-redondeada {
+    border-radius: 5% !important;
+    overflow: hidden;
+    /* Esto asegura que la imagen no pierda calidad al redondearse */
+    display: block; 
+}
+
+/* Contenedor relativo para posicionar las flechas */
+.tierras-carousel-wrapper {
+  position: relative;
+  padding: 0 40px; /* Espacio lateral para las flechas */
+}
+
+/* Flechas: Quitamos el fondo y usamos solo el color */
+.sutil-arrow {
+  color: #B2D17D !important;
+  width: 30px !important;
+  height: 30px !important;
+  transition: all 0.3s ease;
+}
+
+/* Hacer la línea de la flecha más fina y pequeña */
+.sutil-arrow:after {
+  font-size: 20px !important;
+  font-weight: 200 !important;
+}
+
+/* Posicionamiento */
+.swiper-button-prev.sutil-arrow { left: 0; }
+.swiper-button-next.sutil-arrow { right: 0; }
+
+/* Comportamiento cuando ya no hay más slides (minimalista) */
+.swiper-button-disabled {
+  opacity: 0.1 !important;
+  cursor: default;
+}
+
+/* Ajuste de las imágenes */
+.swiper-slide {
+  height: auto;
+}
+
+.swiper-slide img {
+  width: 100%;
+  display: block;
+}
+
+/* Asegura que el contenedor no limite la altura de forma brusca */
+.custom-card-blog {
+    width: 100%;
+    height: auto; /* Permite que crezca según la imagen */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image {
+    position: relative;
+    width: 100%;
+    /* Definimos una altura fija para que todas las cards sean iguales */
+    height: 350px; 
+    overflow: hidden;
+    border-radius: 15px; /* Aprovechamos para redondear */
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    /* 'cover' centra y recorta estéticamente para llenar el espacio. 
+       Si quieres ver la imagen completa (ej. la botella entera con aire a los lados), usa 'contain' */
+    object-fit: cover; 
+    display: block;
+}
+
+/* El overlay debe seguir el tamaño del contenedor */
+.overlay-efecto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.1); /* Ajusta según tu diseño */
+    pointer-events: none;
+}
+
+.btn-proximamente {
+    /* Cambia el color de fondo al verde de Tierras del Este */
+    background-color: #313d46 !important;
+    
+    /* Cambia el color del texto para que sea legible */
+    color: #ffffff !important;
+    
+    /* Asegura que se comporte como un botón bloque/inline */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.btn-proximamente:hover {
+    /* Efecto sutil al pasar el mouse */
+    background-color: #ffffff !important;
+    color: #3A4335 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }

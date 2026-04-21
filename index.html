@@ -8,6 +8,7 @@
   <title>Base - Tailwind CSS Startup Template</title>
   <link rel="icon" href="favicon.ico">
   <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body x-data="{ page: 'home', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
@@ -61,73 +62,76 @@
 
   <main>
     <!-- ===== Hero Start ===== -->
-    <section class="gj do ir hj sp jr i pg">
-      <!-- Hero Images -->
-      <div class="xc fn zd/2 2xl:ud-w-187.5 bd 2xl:ud-h-171.5 h q r">
-        <img src="images/shape-01.svg" alt="shape" class="xc 2xl:ud-block h t -ud-left-[10%] ua" />
-        <img src="images/shape-02.svg" alt="shape" class="xc 2xl:ud-block h u p va" />
-        <img src="images/shape-03.svg" alt="shape" class="xc 2xl:ud-block h v w va" />
-        <img src="images/shape-04.svg" alt="shape" class="h q r" />
-        <img src="images/hero.png" alt="Woman" class="h q r ua" />
-      </div>
+    <div class="relative bg-cover bg-center text-white"
+      style="background-image: url('images/Header_tierras_del_este_salon_de_eventos_rocha.png');">
 
-      <!-- Hero Content -->
-      <div class="bb ze ki xn 2xl:ud-px-0">
-        <div class="tc _o">
-          <div class="animate_left jn/2">
-            <h1 class="fk vj zp or kk wm wb">Eventos, gastronomía y producción en Rocha</h1>
-            <p class="fq">
-              Un espacio único en entorno rural para celebrar, compartir y disfrutar de productos y propuestas gastronómicas con identidad local.
-            </p>
+      <div class="absolute inset-0 bg-black/30 z-0"></div>
 
-            <div class="tc tf yo zf mb">
-              <a href="#!" class="ek jk lk gh gi hi rg ml il vc _d _l">Consultar eventos</a>
-            </div>
+      <div class="relative z-10">
+
+        <div class="tierras-main-wrapper">
+
+          <div class="tierras-overlay"></div>
+
+          <div class="tierras-content-container">
+
+            <section class="tierras-hero">
+              <div class="tierras-hero-inner">
+                <h1 class="tierras-hero-title">Eventos, gastronomía y producción en Rocha</h1>
+                <p class="tierras-hero-text">
+                  Un espacio único en entorno rural para celebrar, compartir y disfrutar de productos y propuestas
+                  gastronómicas con identidad local.
+                </p>
+                <div class="tierras-button-wrapper">
+                  <a href="#!" class="tierras-btn">Consultar por eventos</a>
+                </div>
+              </div>
+            </section>
+
+            <section class="tierras-features">
+              <div class="tierras-features-grid">
+
+                <div class="tierras-feature-item">
+                  <div class="tierras-icon-box">
+                    <img src="images/icon-01.svg" alt="Icono Productos" />
+                  </div>
+                  <div class="tierras-text-box">
+                    <h4>Productos naturales</h4>
+                    <p>Aceite de oliva y productos elaborados sin conservantes, con origen local y producción
+                      responsable.</p>
+                  </div>
+                </div>
+
+                <div class="tierras-feature-item">
+                  <div class="tierras-icon-box">
+                    <img src="images/icon-02.svg" alt="Icono Salón" />
+                  </div>
+                  <div class="tierras-text-box">
+                    <h4>Salón de eventos</h4>
+                    <p>Un espacio con estilo, vistas al campo y todos los servicios para eventos sociales y
+                      corporativos.</p>
+                  </div>
+                </div>
+
+                <div class="tierras-feature-item">
+                  <div class="tierras-icon-box">
+                    <img src="images/icon-03.svg" alt="Icono Catering" />
+                  </div>
+                  <div class="tierras-text-box">
+                    <h4>Catering</h4>
+                    <p>Propuestas gastronómicas completas, adaptadas a cada evento y elaboradas con productos de
+                      calidad.</p>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
           </div>
         </div>
+
       </div>
-    </section>
-    <!-- ===== Hero End ===== -->
-
-    <!-- ===== Small Features Start ===== -->
-    <section id="features">
-      <div class="bb ze ki yn 2xl:ud-px-12.5">
-        <div class="tc uf zo xf ap zf bp mq">
-          <!-- Small Features Item -->
-          <div class="animate_top kn to/3 tc cg oq">
-            <div class="tc wf xf cf ae cd rg mh">
-              <img src="images/icon-01.svg" alt="Icon" />
-            </div>
-            <div>
-              <h4 class="ek yj go kk wm xb">Productos naturales</h4>
-              <p>Aceite de oliva y productos elaborados sin conservantes, con origen local y producción responsable.</p>
-            </div>
-          </div>
-
-          <!-- Small Features Item -->
-          <div class="animate_top kn to/3 tc cg oq">
-            <div class="tc wf xf cf ae cd rg nh">
-              <img src="images/icon-02.svg" alt="Icon" />
-            </div>
-            <div>
-              <h4 class="ek yj go kk wm xb">Salón de eventos</h4>
-              <p>Un espacio con estilo, vistas al campo y todos los servicios para eventos sociales y corporativos.</p>
-            </div>
-          </div>
-
-          <!-- Small Features Item -->
-          <div class="animate_top kn to/3 tc cg oq">
-            <div class="tc wf xf cf ae cd rg oh">
-              <img src="images/icon-03.svg" alt="Icon" />
-            </div>
-            <div>
-              <h4 class="ek yj go kk wm xb">Catering</h4>
-              <p>Propuestas gastronómicas completas, adaptadas a cada evento y elaboradas con productos de calidad.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
     <!-- ===== Small Features End ===== -->
 
     <!-- ===== About Start ===== -->
@@ -137,22 +141,25 @@
           <!-- About Images -->
           <div class="animate_left xc gn gg jn/2 i">
             <div>
-              <img src="images/shape-05.svg" alt="Shape" class="h -ud-left-5 x" />
-              <img src="images/about-01.png" alt="About" class="ib" />
-              <img src="images/about-02.png" alt="About" />
+              <img src="images/tierra_del_este_agro/eventos_tierras_del_este_rocha_uruguay1.png" alt="About"
+                class="ib img-redondeada" />
+              <img src="images/tierra_del_este_agro/eventos_tierras_del_este_rocha_uruguay2.png" alt="About"
+                class="img-redondeada" />
             </div>
             <div>
-              <img src="images/shape-06.svg" alt="Shape" />
-              <img src="images/about-03.png" alt="About" class="ob gb" />
-              <img src="images/shape-07.svg" alt="Shape" class="bb" />
+              <img src="images/tierra_del_este_agro/tierra_del_este_rocha.png" alt="About"
+                class="ob gb img-redondeada" />
             </div>
           </div>
 
           <!-- About Content -->
           <div class="animate_right jn/2">
             <h4 class="ek yj mk gb">Tierras del Este, Rocha, Uruguay</h4>
-            <h2 class="fk vj zp pr kk wm qb">Una visión que impulsa el desarrollo del territorio</h2>
-            <p class="uo">Tierras del Este nace de la visión de Richard, empresario con más de quince años de experiencia desarrollando proyectos productivos en Rocha.<br>El emprendimiento integra producción agropecuaria, elaboración de productos y propuestas gastronómicas, con una mirada puesta en el crecimiento sostenible y el valor del entorno rural.</p>
+            <h2 class="fk vj zp pr kk wm qb titulo_about">Una visión que impulsa el desarrollo del territorio</h2>
+            <p class="uo">Tierras del Este nace de la visión de Richard, empresario con más de quince años de
+              experiencia desarrollando proyectos productivos en Rocha.<br>El emprendimiento integra producción
+              agropecuaria, elaboración de productos y propuestas gastronómicas, con una mirada puesta en el crecimiento
+              sostenible y el valor del entorno rural.</p>
           </div>
         </div>
       </div>
@@ -160,44 +167,188 @@
     <!-- ===== About End ===== -->
 
     <!-- ===== Blog Start ===== -->
-   <section class="ji gp uq">
-  <div x-data="{ sectionTitle: 'Tasca del Ñandú | Salón de eventos con identidad rural', sectionTitleText: 'Tasca del Ñandú es un salón para eventos sociales y corporativos ubicado en un entorno rural privilegiado de Rocha.<br>Un espacio pensado para celebraciones especiales, con instalaciones de estilo, vistas abiertas al campo y una propuesta gastronómica integral.' }">
-    <div class="animate_top bb ze rj ki xn vq">
-      <h2 x-text="sectionTitle" class="fk vj pr kk wm on/5 gq/2 bb _b titulo-horizontal"></h2>
-      <p class="bb on/5 wo/5 hq" x-html="sectionTitleText"></p>
-    </div>
-  </div>
-
-  <div class="bb ye ki xn vq jb jo">
-    <div class="wc qf pn xo zf iq grid-moderno">
-      <div class="card-final animate_top">
-        <div class="card-img-wrapper">
-          <img src="images/blog-01.png" alt="Evento 1" />
-          <div class="brillo-hover"></div>
+    <section class="ji gp uq">
+      <div
+        x-data="{ sectionTitle: 'Tasca del Ñandú | Salón de eventos con identidad rural', sectionTitleText: 'Tasca del Ñandú es un salón para eventos sociales y corporativos ubicado en un entorno rural privilegiado de Rocha.<br>Un espacio pensado para celebraciones especiales, con instalaciones de estilo, vistas abiertas al campo y una propuesta gastronómica integral.' }">
+        <div class="animate_top bb ze rj ki xn vq">
+          <h2 x-text="sectionTitle" class="fk vj pr kk wm on/5 gq/2 bb _b titulo-horizontal titulo_about"></h2>
+          <p class="bb on/5 wo/5 hq" x-html="sectionTitleText"></p>
         </div>
       </div>
 
-      <div class="card-final animate_top">
-        <div class="card-img-wrapper">
-          <img src="images/blog-02.png" alt="Evento 2" />
-          <div class="brillo-hover"></div>
-        </div>
-      </div>
+      <div class="bb ye ki xn vq jb jo">
+        <div class="tierras-carousel-wrapper">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
 
-      <div class="card-final animate_top">
-        <div class="card-img-wrapper">
-          <img src="images/blog-03.png" alt="Evento 3" />
-          <div class="brillo-hover"></div>
+              <div class="swiper-slide">
+                <div class="card-final">
+                  <div class="card-img-wrapper">
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon1.png" alt="Evento 1" class="img-redondeada" />
+                    <div class="brillo-hover"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card-final">
+                  <div class="card-img-wrapper">
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon2.png" alt="Evento 2" class="img-redondeada" />
+                    <div class="brillo-hover"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card-final">
+                  <div class="card-img-wrapper">
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon3.png" alt="Evento 3" class="img-redondeada" />
+                    <div class="brillo-hover"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card-final">
+                  <div class="card-img-wrapper">
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon4.png" alt="Evento 4" class="img-redondeada" />
+                    <div class="brillo-hover"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card-final">
+                  <div class="card-img-wrapper">
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon5.png" alt="Evento 5" class="img-redondeada" />
+                    <div class="brillo-hover"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card-final">
+                  <div class="card-img-wrapper">
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon6.png" alt="Evento 6" class="img-redondeada" />
+                    <div class="brillo-hover"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card-final">
+                  <div class="card-img-wrapper">
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon7.png" alt="Evento 7" class="img-redondeada" />
+                    <div class="brillo-hover"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card-final">
+                  <div class="card-img-wrapper">
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon8.png" alt="Evento 8" class="img-redondeada" />
+                    <div class="brillo-hover"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card-final">
+                  <div class="card-img-wrapper">
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon9.png" alt="Evento 9" class="img-redondeada" />
+                    <div class="brillo-hover"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card-final">
+                  <div class="card-img-wrapper">
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon10.png" alt="Evento 10" class="img-redondeada" />
+                    <div class="brillo-hover"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card-final">
+                  <div class="card-img-wrapper">
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon11.png" alt="Evento 11" class="img-redondeada" />
+                    <div class="brillo-hover"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card-final">
+                  <div class="card-img-wrapper">
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon12.png" alt="Evento 12" class="img-redondeada" />
+                    <div class="brillo-hover"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card-final">
+                  <div class="card-img-wrapper">
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon13.png" alt="Evento 13" class="img-redondeada" />
+                    <div class="brillo-hover"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card-final">
+                  <div class="card-img-wrapper">
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon14.png" alt="Evento 14" class="img-redondeada" />
+                    <div class="brillo-hover"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card-final">
+                  <div class="card-img-wrapper">
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon15.png" alt="Evento 15" class="img-redondeada" />
+                    <div class="brillo-hover"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card-final">
+                  <div class="card-img-wrapper">
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon16.png" alt="Evento 16" class="img-redondeada" />
+                    <div class="brillo-hover"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card-final">
+                  <div class="card-img-wrapper">
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon17.png" alt="Evento 17" class="img-redondeada" />
+                    <div class="brillo-hover"></div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+
+          <div class="swiper-button-prev sutil-arrow"></div>
+          <div class="swiper-button-next sutil-arrow"></div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
     <!-- ===== Blog End ===== -->
 
-    <!-- ===== Projects Start ===== -->
+    <!--  Projects Start 
     <section class="pg pj vp mr oj wp nr">
-      <!-- Section Title Start -->
+       Section Title Start
       <div
         x-data="{ sectionTitle: `Catering para eventos`, sectionTitleText: `Ofrecemos el alquiler del salón con servicio gastronómico completo, adaptado a cada tipo de evento, cuidando cada detalle para que la experiencia sea única.`}">
         <div class="animate_top bb ze rj ki xn vq">
@@ -208,41 +359,41 @@
 
 
       </div>
-      <!-- Section Title End -->
+      
 
       <div class="bb ze ki xn 2xl:ud-px-0 jb" x-data="{filterTab: 1}">
-        
-        <!-- Porject Tab -->
-        <div class="catering-filter-container">
-    <div class="catering-filter-wrapper">
-      <button @click="filterTab = 1" :class="{ 'active-tab' : filterTab === 1 }" class="catering-tab">
-        Cocina Local
-      </button>
-      <button @click="filterTab = 2" :class="{ 'active-tab' : filterTab === 2 }" class="catering-tab">
-        Cocina Italiana
-      </button>
-      <button @click="filterTab = 3" :class="{ 'active-tab' : filterTab === 3 }" class="catering-tab">
-        Pizzas y Empanadas
-      </button>
-      <button @click="filterTab = 4" :class="{ 'active-tab' : filterTab === 4 }" class="catering-tab">
-        Parrilla Tradicional
-      </button>
-      <button @click="filterTab = 5" :class="{ 'active-tab' : filterTab === 5 }" class="catering-tab">
-        Vinos y Bebidas
-      </button>
-      <button @click="filterTab = 6" :class="{ 'active-tab' : filterTab === 6 }" class="catering-tab">
-        Postres Clásicos
-      </button>
-      <button @click="filterTab = 7" :class="{ 'active-tab' : filterTab === 7 }" class="catering-tab">
-        Coffee Break
-      </button>
-    </div>
-  </div>
 
-        <!-- Projects item wrapper -->
+        
+        <div class="catering-filter-container">
+          <div class="catering-filter-wrapper">
+            <button @click="filterTab = 1" :class="{ 'active-tab' : filterTab === 1 }" class="catering-tab">
+              Cocina Local
+            </button>
+            <button @click="filterTab = 2" :class="{ 'active-tab' : filterTab === 2 }" class="catering-tab">
+              Cocina Italiana
+            </button>
+            <button @click="filterTab = 3" :class="{ 'active-tab' : filterTab === 3 }" class="catering-tab">
+              Pizzas y Empanadas
+            </button>
+            <button @click="filterTab = 4" :class="{ 'active-tab' : filterTab === 4 }" class="catering-tab">
+              Parrilla Tradicional
+            </button>
+            <button @click="filterTab = 5" :class="{ 'active-tab' : filterTab === 5 }" class="catering-tab">
+              Vinos y Bebidas
+            </button>
+            <button @click="filterTab = 6" :class="{ 'active-tab' : filterTab === 6 }" class="catering-tab">
+              Postres Clásicos
+            </button>
+            <button @click="filterTab = 7" :class="{ 'active-tab' : filterTab === 7 }" class="catering-tab">
+              Coffee Break
+            </button>
+          </div>
+        </div>
+
+        
         <div class="projects-wrapper tc -ud-mx-5">
           <div class="project-sizer"></div>
-          <!-- Project Item -->
+          
           <div class="project-item wi fb vd jn/2 to/3 branding ecommerce">
             <div class="c i pg sg z-1">
               <img src="images/project-01.png" alt="Project" />
@@ -261,7 +412,7 @@
             </div>
           </div>
 
-          <!-- Project Item -->
+          
           <div class="project-item wi fb vd jn/2 to/3 digital">
             <div class="c i pg sg z-1">
               <img src="images/project-02.png" alt="Project" />
@@ -280,7 +431,7 @@
             </div>
           </div>
 
-          <!-- Project Item -->
+          
           <div class="project-item wi fb vd jn/2 to/3 branding ecommerce">
             <div class="c i pg sg z-1">
               <img src="images/project-04.png" alt="Project" />
@@ -299,7 +450,7 @@
             </div>
           </div>
 
-          <!-- Project Item -->
+         
           <div class="project-item wi fb vd vo/3 digital ecommerce">
             <div class="c i pg sg z-1">
               <img src="images/project-03.png" alt="Project" />
@@ -320,73 +471,74 @@
         </div>
       </div>
     </section>
-    <!-- ===== Projects End ===== -->
+     Projects End -->
 
     <!-- ===== Blog Start ===== -->
     <section class="ji gp uq">
-  <div x-data="{ sectionTitle: 'Tasca del Ñandú | Salón de eventos', sectionTitleText: 'Espacio pensado para celebraciones especiales con instalaciones de estilo.' }">
-    <div class="animate_top bb ze rj ki xn vq">
-      <h2 x-text="sectionTitle" class="fk vj pr kk wm on/5 gq/2 bb _b titulo-horizontal"></h2>
-      <p class="bb on/5 wo/5 hq" x-html="sectionTitleText"></p>
-    </div>
-  </div> <div class="bb ye ki xn vq jb jo">
-    <div class="wc qf pn xo zf iq grid-blog-nuevo">
-      
-      <div class="custom-card-blog animate_top">
-        <div class="card-image">
-          <img src="images/blog-01.png" alt="Blog 1">
-          <div class="overlay-efecto"></div>
+      <div
+        x-data="{ sectionTitle: 'Tasca del Ñandú | Salón de eventos', sectionTitleText: 'Espacio pensado para celebraciones especiales con instalaciones de estilo.' }">
+        <div class="animate_top bb ze rj ki xn vq">
+          <h2 x-text="sectionTitle" class="fk vj pr kk wm on/5 gq/2 bb _b titulo-horizontal"></h2>
+          <p class="bb on/5 wo/5 hq" x-html="sectionTitleText"></p>
         </div>
       </div>
+      <div class="bb ye ki xn vq jb jo">
+        <div class="wc qf pn xo zf iq grid-blog-nuevo">
 
-      <div class="custom-card-blog animate_top">
-        <div class="card-image">
-          <img src="images/blog-02.png" alt="Blog 2">
-          <div class="overlay-efecto"></div>
+          <div class="custom-card-blog animate_top">
+            <div class="card-image">
+              <img src="images/aceites_tierra_del_este/aceite_tierras_del_este_uruguay.png" alt="Blog 1">
+              <div class="overlay-efecto"></div>
+            </div>
+          </div>
+
+          <div class="custom-card-blog animate_top">
+            <div class="card-image">
+              <img src="images/aceites_tierra_del_este/aceite_tierras_del_este_uruguay_1.png" alt="Blog 2">
+              <div class="overlay-efecto"></div>
+            </div>
+          </div>
+
+          <div class="custom-card-blog animate_top">
+            <div class="card-image">
+              <img src="images/aceites_tierra_del_este/aceite_tierras_del_este_uruguay_2.png" alt="Blog 3">
+              <div class="overlay-efecto"></div>
+            </div>
+          </div>
+
         </div>
       </div>
-
-      <div class="custom-card-blog animate_top">
-        <div class="card-image">
-          <img src="images/blog-03.png" alt="Blog 3">
-          <div class="overlay-efecto"></div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+    </section>
     <!-- ===== Blog End ===== -->
 
-     <!-- ===== About Start ===== -->
+    <!-- ===== About Start ===== -->
     <section class="ji gp uq 2xl:ud-py-35 pg">
       <div class="bb ze ki xn wq">
         <div class="tc wf gg qq">
           <!-- About Images -->
           <div class="animate_left xc gn gg jn/2 i">
             <div>
-              <img src="images/shape-05.svg" alt="Shape" class="h -ud-left-5 x" />
-              <img src="images/about-01.png" alt="About" class="ib" />
-              <img src="images/about-02.png" alt="About" />
+              <img src="images/tierra_del_este_agro/eventos_tierras_del_este_rocha_uruguay3.png" alt="About" class="ib img-redondeada" />
+              <img src="images/tierra_del_este_agro/eventos_tierras_del_este_rocha_uruguay4.png" alt="About" class="img-redondeada"/>
             </div>
             <div>
-              <img src="images/shape-06.svg" alt="Shape" />
-              <img src="images/about-03.png" alt="About" class="ob gb" />
-              <img src="images/shape-07.svg" alt="Shape" class="bb" />
+              <img src="images/tierra_del_este_agro/tierra_del_este_rocha2.png" alt="About" class="ob gb img-redondeada" />
             </div>
           </div>
 
           <!-- About Content -->
           <div class="animate_right jn/2">
-            <h2 class="fk vj zp pr kk wm qb">Producción agropecuaria</h2>
-            <p class="uo">El proyecto se desarrolla en campos de la región de Rocha, integrando ganadería, olivos y un manejo responsable del entorno natural.<br>La producción agropecuaria constituye la base del ecosistema Tierras del Este y respalda cada una de sus iniciativas.</p>
+            <h2 class="fk vj zp pr kk wm qb titulo_about">Producción agropecuaria</h2>
+            <p class="uo">El proyecto se desarrolla en campos de la región de Rocha, integrando ganadería, olivos y un
+              manejo responsable del entorno natural.<br>La producción agropecuaria constituye la base del ecosistema
+              Tierras del Este y respalda cada una de sus iniciativas.</p>
           </div>
         </div>
       </div>
     </section>
     <!-- ===== About End ===== -->
 
-  
+
     <!-- ===== CTA Start ===== -->
     <section class="i pg gh ji">
       <!-- Bg Shape -->
@@ -399,13 +551,15 @@
               Proyección y desarrollo
             </h2>
             <p class="lk">
-              A mediano plazo, Tierras del Este incorporará un desarrollo inmobiliario que ofrecerá lotes de 3000 m² integrados al paisaje natural, con vistas a la Laguna de Rocha.
-El proyecto contempla además la construcción de un hotel boutique, diseñado para brindar una experiencia de descanso en contacto con la naturaleza.
+              A mediano plazo, Tierras del Este incorporará un desarrollo inmobiliario que ofrecerá lotes de 3000 m²
+              integrados al paisaje natural, con vistas a la Laguna de Rocha.
+              El proyecto contempla además la construcción de un hotel boutique, diseñado para brindar una experiencia
+              de descanso en contacto con la naturaleza.
             </p>
           </div>
           <div class="animate_right bf">
-            <a href="#!" class="vc ek kk hh rg ol il cm gi hi">
-              Próximamente 
+            <a href="#!" class="vc ek kk hh rg ol il cm gi hi btn-proximamente">
+              Próximamente
             </a>
           </div>
         </div>
@@ -415,47 +569,49 @@ El proyecto contempla además la construcción de un hotel boutique, diseñado p
     <!-- ===== CTA End ===== -->
   </main>
   <!-- ===== Footer Start ===== -->
- <footer class="footer-seccion">
-  <div class="bb ze ki xn 2xl:ud-px-0">
-    <div class="ji gp">
-      <div class="tc uf ap gg fp container-grid-footer">
-        
-        <div class="animate_top zd/2 to/4">
-          <a href="index.html">
-            <img src="images/logo-dark.svg" alt="Logo" class="footer-logo-img" />
-          </a>
-          <p class="footer-desc">Tierras del Este es un proyecto rural ubicado en Rocha, Uruguay, que integra producción agropecuaria, productos naturales, gastronomía y eventos.</p>
-        </div>
+  <footer class="footer-seccion">
+    <div class="bb ze ki xn 2xl:ud-px-0">
+      <div class="ji gp">
+        <div class="tc uf ap gg fp container-grid-footer">
 
-        <div class="vd ro tc sf rn un gg vn">
-          <div class="animate_top">
-            <h4 class="footer-h4">Menú</h4>
-            <ul class="footer-links">
-              <li><a href="index.html">Inicio</a></li>
-              <li><a href="#features">Nosotros</a></li>
-              <li><a href="#!">Eventos</a></li>
-              <li><a href="#!">Campo Ganadero</a></li>
-            </ul>
+          <div class="animate_top zd/2 to/4">
+            <a href="index.html">
+              <img src="images/logo-dark.svg" alt="Logo" class="footer-logo-img" />
+            </a>
+            <p class="footer-desc">Tierras del Este es un proyecto rural ubicado en Rocha, Uruguay, que integra
+              producción agropecuaria, productos naturales, gastronomía y eventos.</p>
           </div>
 
-          <div class="animate_top">
-            <h4 class="footer-h4">Contacto</h4>
-            <ul class="footer-links">
-              <li><a href="#!">Rocha, Uruguay</a></li>
-              <li><a href="#!">Instagram</a></li>
-              <li><a href="#!">WhatsApp</a></li>
-            </ul>
-          </div>
-        </div>
+          <div class="vd ro tc sf rn un gg vn">
+            <div class="animate_top">
+              <h4 class="footer-h4">Menú</h4>
+              <ul class="footer-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#features">Nosotros</a></li>
+                <li><a href="#!">Eventos</a></li>
+                <li><a href="#!">Campo Ganadero</a></li>
+              </ul>
+            </div>
 
+            <div class="animate_top">
+              <h4 class="footer-h4">Contacto</h4>
+              <ul class="footer-links">
+                <li><a href="#!">Rocha, Uruguay</a></li>
+                <li><a href="#!">Instagram</a></li>
+                <li><a href="#!">WhatsApp</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="footer-copy">
+        <p>&copy; 2026 Tierras del Este. Todos los derechos reservados. | <a href="https://www.modernawebs.com/"
+            target="_blank">mOderna</a></p>
       </div>
     </div>
-
-    <div class="footer-copy">
-      <p>&copy; 2026 Tierras del Este. Todos los derechos reservados. | <a href="https://www.modernawebs.com/" target="_blank">mOderna</a></p>
-    </div>
-  </div>
-</footer>
+  </footer>
 
   <!-- ===== Footer End ===== -->
 
@@ -508,6 +664,7 @@ El proyecto contempla además la construcción de un hotel boutique, diseñado p
     };
   </script>
   <script defer src="bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 
 </html>
