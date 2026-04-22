@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Base - Tailwind CSS Startup Template</title>
-  <link rel="icon" href="favicon.ico">
+  <title>Tierras del Este | Salón de Eventos y Productos Naturales en Rocha</title>
+  <meta name="description" content="Descubrí Tierras del Este en Rocha, Uruguay. Un entorno rural único con salón de eventos, gastronomía local y productos naturales como nuestro aceite de oliva virgen.">
+  <link rel="icon" href="images/logo_tierrasdeleste_salon_de_eventos_rocha_uruguay.png">
   <link href="style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body x-data="{ page: 'home', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
@@ -16,17 +18,20 @@
          darkMode = JSON.parse(localStorage.getItem('darkMode'));
          $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
   :class="{'b eh': darkMode === true}">
+
   <!-- ===== Header Start ===== -->
-  <header class="g s r vd ya cj" :class="{ 'hh sm _k dj bl ll' : stickyMenu }"
+  <header class="g s r vd ya cj w-full" :class="{ 'hh sm _k dj bl ll' : stickyMenu }"
     @scroll.window="stickyMenu = (window.pageYOffset > 20) ? true : false">
-    <div class="bb ze ki xn 2xl:ud-px-0 oo wf yf i">
-      <div class="vd to/4 tc wf yf">
+    <div class="bb ze ki xn 2xl:ud-px-0 oo wf yf i tc items-center">
+
+      <div class="vd tc wf yf w-auto flex-shrink-0">
         <a href="index.html">
-          <img class="om" src="images/logo-light.svg" alt="Logo Light" />
-          <img class="xc nm" src="images/logo-dark.svg" alt="Logo Dark" />
+          <img class="om" style="max-height: 80px;" src="images/logo_tierrasdeleste_salon_de_eventos_rocha_uruguay.png"
+            alt="Logo Light" />
+          <img class="xc nm" style="max-height: 80px;"
+            src="images/logo_tierrasdeleste_salon_de_eventos_rocha_uruguay.png" alt="Logo Dark" />
         </a>
 
-        <!-- Hamburger Toggle BTN -->
         <button class="po rc" @click="navigationOpen = !navigationOpen">
           <span class="rc i pf re pd">
             <span class="du-block h q vd yc">
@@ -40,24 +45,23 @@
             </span>
           </span>
         </button>
-        <!-- Hamburger Toggle BTN -->
       </div>
 
-      <div class="vd wo/4 sd qo f ho oo wf yf" :class="{ 'd hh rm sr td ud qg ug jc yh': navigationOpen }">
+      <div class="vd sd qo f ho oo wf yf w-full justify-end"
+        :class="{ 'd hh rm sr td ud qg ug jc yh': navigationOpen }">
         <nav>
-          <ul class="tc _o sf yo cg ep">
-            <li><a href="index.html" class="xl" :class="{ 'mk': page === 'home' }">Inicio</a></li>
-            <li><a href="index.html#features" class="xl">Nosotros</a></li>
-            <li><a href="index.html#support" class="xl">Eventos</a></li>
-            <li><a href="index.html#support" class="xl">Catering</a></li>
-            <li><a href="index.html#support" class="xl">Productos</a></li>
-            <li><a href="index.html#support" class="xl">Campo Ganadero</a></li>
+          <ul class="tc _o sf yo cg ep items-center space-x-7">
+            <li><a href="index.html" class="xl whitespace-nowrap" :class="{ 'mk': page === 'home' }">Inicio</a></li>
+            <li><a href="index.html#about" class="xl whitespace-nowrap">Nosotros</a></li>
+            <li><a href="index.html#eventos" class="xl whitespace-nowrap">Eventos</a></li>
+            <li><a href="index.html#productos" class="xl whitespace-nowrap">Productos</a></li>
+            <li class="min-w-max"><a href="index.html#produccion_ganadera" class="xl whitespace-nowrap">Campo Ganadero</a></li>
+            <li><a href="index.html#contacto" class="xl whitespace-nowrap">Contacto</a></li>
           </ul>
         </nav>
       </div>
     </div>
   </header>
-
   <!-- ===== Header End ===== -->
 
   <main>
@@ -135,7 +139,7 @@
     <!-- ===== Small Features End ===== -->
 
     <!-- ===== About Start ===== -->
-    <section class="ji gp uq 2xl:ud-py-35 pg">
+    <section class="ji gp uq 2xl:ud-py-35 pg" id="about">
       <div class="bb ze ki xn wq">
         <div class="tc wf gg qq">
           <!-- About Images -->
@@ -167,7 +171,7 @@
     <!-- ===== About End ===== -->
 
     <!-- ===== Blog Start ===== -->
-    <section class="ji gp uq">
+    <section class="ji gp uq" id="eventos">
       <div
         x-data="{ sectionTitle: 'Tasca del Ñandú | Salón de eventos con identidad rural', sectionTitleText: 'Tasca del Ñandú es un salón para eventos sociales y corporativos ubicado en un entorno rural privilegiado de Rocha.<br>Un espacio pensado para celebraciones especiales, con instalaciones de estilo, vistas abiertas al campo y una propuesta gastronómica integral.' }">
         <div class="animate_top bb ze rj ki xn vq">
@@ -184,7 +188,8 @@
               <div class="swiper-slide">
                 <div class="card-final">
                   <div class="card-img-wrapper">
-                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon1.png" alt="Evento 1" class="img-redondeada" />
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon1.png"
+                      alt="Evento 1" class="img-redondeada" />
                     <div class="brillo-hover"></div>
                   </div>
                 </div>
@@ -193,7 +198,8 @@
               <div class="swiper-slide">
                 <div class="card-final">
                   <div class="card-img-wrapper">
-                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon2.png" alt="Evento 2" class="img-redondeada" />
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon2.png"
+                      alt="Evento 2" class="img-redondeada" />
                     <div class="brillo-hover"></div>
                   </div>
                 </div>
@@ -202,7 +208,8 @@
               <div class="swiper-slide">
                 <div class="card-final">
                   <div class="card-img-wrapper">
-                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon3.png" alt="Evento 3" class="img-redondeada" />
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon3.png"
+                      alt="Evento 3" class="img-redondeada" />
                     <div class="brillo-hover"></div>
                   </div>
                 </div>
@@ -211,7 +218,8 @@
               <div class="swiper-slide">
                 <div class="card-final">
                   <div class="card-img-wrapper">
-                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon4.png" alt="Evento 4" class="img-redondeada" />
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon4.png"
+                      alt="Evento 4" class="img-redondeada" />
                     <div class="brillo-hover"></div>
                   </div>
                 </div>
@@ -220,7 +228,8 @@
               <div class="swiper-slide">
                 <div class="card-final">
                   <div class="card-img-wrapper">
-                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon5.png" alt="Evento 5" class="img-redondeada" />
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon5.png"
+                      alt="Evento 5" class="img-redondeada" />
                     <div class="brillo-hover"></div>
                   </div>
                 </div>
@@ -229,7 +238,8 @@
               <div class="swiper-slide">
                 <div class="card-final">
                   <div class="card-img-wrapper">
-                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon6.png" alt="Evento 6" class="img-redondeada" />
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon6.png"
+                      alt="Evento 6" class="img-redondeada" />
                     <div class="brillo-hover"></div>
                   </div>
                 </div>
@@ -238,7 +248,8 @@
               <div class="swiper-slide">
                 <div class="card-final">
                   <div class="card-img-wrapper">
-                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon7.png" alt="Evento 7" class="img-redondeada" />
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon7.png"
+                      alt="Evento 7" class="img-redondeada" />
                     <div class="brillo-hover"></div>
                   </div>
                 </div>
@@ -247,7 +258,8 @@
               <div class="swiper-slide">
                 <div class="card-final">
                   <div class="card-img-wrapper">
-                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon8.png" alt="Evento 8" class="img-redondeada" />
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon8.png"
+                      alt="Evento 8" class="img-redondeada" />
                     <div class="brillo-hover"></div>
                   </div>
                 </div>
@@ -256,7 +268,8 @@
               <div class="swiper-slide">
                 <div class="card-final">
                   <div class="card-img-wrapper">
-                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon9.png" alt="Evento 9" class="img-redondeada" />
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon9.png"
+                      alt="Evento 9" class="img-redondeada" />
                     <div class="brillo-hover"></div>
                   </div>
                 </div>
@@ -265,7 +278,8 @@
               <div class="swiper-slide">
                 <div class="card-final">
                   <div class="card-img-wrapper">
-                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon10.png" alt="Evento 10" class="img-redondeada" />
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon10.png"
+                      alt="Evento 10" class="img-redondeada" />
                     <div class="brillo-hover"></div>
                   </div>
                 </div>
@@ -274,7 +288,8 @@
               <div class="swiper-slide">
                 <div class="card-final">
                   <div class="card-img-wrapper">
-                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon11.png" alt="Evento 11" class="img-redondeada" />
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon11.png"
+                      alt="Evento 11" class="img-redondeada" />
                     <div class="brillo-hover"></div>
                   </div>
                 </div>
@@ -283,7 +298,8 @@
               <div class="swiper-slide">
                 <div class="card-final">
                   <div class="card-img-wrapper">
-                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon12.png" alt="Evento 12" class="img-redondeada" />
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon12.png"
+                      alt="Evento 12" class="img-redondeada" />
                     <div class="brillo-hover"></div>
                   </div>
                 </div>
@@ -292,7 +308,8 @@
               <div class="swiper-slide">
                 <div class="card-final">
                   <div class="card-img-wrapper">
-                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon13.png" alt="Evento 13" class="img-redondeada" />
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon13.png"
+                      alt="Evento 13" class="img-redondeada" />
                     <div class="brillo-hover"></div>
                   </div>
                 </div>
@@ -301,7 +318,8 @@
               <div class="swiper-slide">
                 <div class="card-final">
                   <div class="card-img-wrapper">
-                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon14.png" alt="Evento 14" class="img-redondeada" />
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon14.png"
+                      alt="Evento 14" class="img-redondeada" />
                     <div class="brillo-hover"></div>
                   </div>
                 </div>
@@ -310,7 +328,8 @@
               <div class="swiper-slide">
                 <div class="card-final">
                   <div class="card-img-wrapper">
-                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon15.png" alt="Evento 15" class="img-redondeada" />
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon15.png"
+                      alt="Evento 15" class="img-redondeada" />
                     <div class="brillo-hover"></div>
                   </div>
                 </div>
@@ -319,7 +338,8 @@
               <div class="swiper-slide">
                 <div class="card-final">
                   <div class="card-img-wrapper">
-                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon16.png" alt="Evento 16" class="img-redondeada" />
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon16.png"
+                      alt="Evento 16" class="img-redondeada" />
                     <div class="brillo-hover"></div>
                   </div>
                 </div>
@@ -328,7 +348,8 @@
               <div class="swiper-slide">
                 <div class="card-final">
                   <div class="card-img-wrapper">
-                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon17.png" alt="Evento 17" class="img-redondeada" />
+                    <img src="images/eventos_tierra_del_este/eventos_tierras_del_este_rocha_uruguay_salon17.png"
+                      alt="Evento 17" class="img-redondeada" />
                     <div class="brillo-hover"></div>
                   </div>
                 </div>
@@ -474,7 +495,7 @@
      Projects End -->
 
     <!-- ===== Blog Start ===== -->
-    <section class="ji gp uq">
+    <section class="ji gp uq" id="productos">
       <div
         x-data="{ sectionTitle: 'Tasca del Ñandú | Salón de eventos', sectionTitleText: 'Espacio pensado para celebraciones especiales con instalaciones de estilo.' }">
         <div class="animate_top bb ze rj ki xn vq">
@@ -512,17 +533,20 @@
     <!-- ===== Blog End ===== -->
 
     <!-- ===== About Start ===== -->
-    <section class="ji gp uq 2xl:ud-py-35 pg">
+    <section class="ji gp uq 2xl:ud-py-35 pg" id="produccion_ganadera">
       <div class="bb ze ki xn wq">
         <div class="tc wf gg qq">
           <!-- About Images -->
           <div class="animate_left xc gn gg jn/2 i">
             <div>
-              <img src="images/tierra_del_este_agro/eventos_tierras_del_este_rocha_uruguay3.png" alt="About" class="ib img-redondeada" />
-              <img src="images/tierra_del_este_agro/eventos_tierras_del_este_rocha_uruguay4.png" alt="About" class="img-redondeada"/>
+              <img src="images/tierra_del_este_agro/eventos_tierras_del_este_rocha_uruguay3.png" alt="About"
+                class="ib img-redondeada" />
+              <img src="images/tierra_del_este_agro/eventos_tierras_del_este_rocha_uruguay4.png" alt="About"
+                class="img-redondeada" />
             </div>
             <div>
-              <img src="images/tierra_del_este_agro/tierra_del_este_rocha2.png" alt="About" class="ob gb img-redondeada" />
+              <img src="images/tierra_del_este_agro/tierra_del_este_rocha2.png" alt="About"
+                class="ob gb img-redondeada" />
             </div>
           </div>
 
@@ -569,50 +593,65 @@
     <!-- ===== CTA End ===== -->
   </main>
   <!-- ===== Footer Start ===== -->
-  <footer class="footer-seccion">
+  <footer class="footer-seccion" style="padding-top: 80px; padding-bottom: 40px;" id="contacto">
     <div class="bb ze ki xn 2xl:ud-px-0">
-      <div class="ji gp">
-        <div class="tc uf ap gg fp container-grid-footer">
+      <div class="tc uf ap gg fp justify-between flex-wrap">
 
-          <div class="animate_top zd/2 to/4">
-            <a href="index.html">
-              <img src="images/logo-dark.svg" alt="Logo" class="footer-logo-img" />
+        <div class="animate_top zd/2 to/3 mb-10">
+          <a href="index.html">
+            <img src="images/logo_tierrasdeleste_salon_de_eventos_rocha_uruguay.png" alt="Logo"
+              style="max-height: 80px;" class="footer-logo-img mb-6" />
+          </a>
+          <p class="footer-desc" style="max-width: 300px; line-height: 1.6; margin-top: 20px;">
+            Tierras del Este es un proyecto rural ubicado en Rocha, Uruguay, que integra
+            producción agropecuaria, productos naturales, gastronomía y eventos.
+          </p>
+          <div class="flex tc items-center mt-6" style="gap: 20px;">
+            <a href="https://www.instagram.com/tierrasdeleste_/" target="_blank">
+              <i class="fab fa-instagram" style="color: #313d46; font-size: 20px;"></i>
             </a>
-            <p class="footer-desc">Tierras del Este es un proyecto rural ubicado en Rocha, Uruguay, que integra
-              producción agropecuaria, productos naturales, gastronomía y eventos.</p>
+            <a href="https://wa.me/59891028462" target="_blank">
+              <i class="fab fa-whatsapp" style="color: #313d46; font-size: 20px;"></i>
+            </a>
           </div>
-
-          <div class="vd ro tc sf rn un gg vn">
-            <div class="animate_top">
-              <h4 class="footer-h4">Menú</h4>
-              <ul class="footer-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="#features">Nosotros</a></li>
-                <li><a href="#!">Eventos</a></li>
-                <li><a href="#!">Campo Ganadero</a></li>
-              </ul>
-            </div>
-
-            <div class="animate_top">
-              <h4 class="footer-h4">Contacto</h4>
-              <ul class="footer-links">
-                <li><a href="#!">Rocha, Uruguay</a></li>
-                <li><a href="#!">Instagram</a></li>
-                <li><a href="#!">WhatsApp</a></li>
-              </ul>
-            </div>
-          </div>
-
         </div>
+
+        <div class="animate_top">
+          <h4 class="footer-h4 titulo_about" style="font-weight: 700; margin-bottom: 25px; font-size: 1.2rem;">Menú</h4>
+          <ul class="footer-links" style="line-height: 2.2;">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#about">Nosotros</a></li>
+            <li><a href="#eventos">Eventos</a></li>
+            <li><a href="#produccion_ganadera">Campo Ganadero</a></li>
+            <li><a href="#proyeccion">Proyección</a></li>
+          </ul>
+        </div>
+
+        <div class="animate_top">
+          <h4 class="footer-h4 titulo_about" style="font-weight: 700; margin-bottom: 25px; font-size: 1.2rem;">Contactos
+          </h4>
+          <ul class="footer-links" style="line-height: 2.2;">
+            <li>Rocha, Uruguay</li>
+            <li>+598 91 028 462</li>
+            <li><a href="https://www.instagram.com/tierrasdeleste_/" target="_blank"
+                style="text-decoration: underline;">
+                <i class="fab fa-instagram" style="color: #313d46; font-size: 20px;"></i> Seguinos en Instagram
+              </a></li>
+          </ul>
+        </div>
+
       </div>
 
-      <div class="footer-copy">
-        <p>&copy; 2026 Tierras del Este. Todos los derechos reservados. | <a href="https://www.modernawebs.com/"
-            target="_blank">mOderna</a></p>
+      <div class="footer-bottom mt-20 pt-8" style="border-top: 1px solid #e5e7eb; margin-top: 50px;">
+        <div class="flex w-full justify-center items-center text-center">
+          <p class="footer-copy" style="color: #6b7280; font-size: 0.9rem; margin: 0 auto;">
+            &copy; 2026 Tierras del Este. Todos los derechos reservados. |
+            <a href="https://www.modernawebs.com/" target="_blank" style="font-weight: 600; color: inherit;">mOderna</a>
+          </p>
+        </div>
       </div>
     </div>
   </footer>
-
   <!-- ===== Footer End ===== -->
 
   <!-- ====== Back To Top Start ===== -->
