@@ -47,19 +47,37 @@
         </button>
       </div>
 
-      <div class="vd sd qo f ho oo wf yf w-full justify-end"
-        :class="{ 'd hh rm sr td ud qg ug jc yh': navigationOpen }">
-        <nav>
-          <ul class="tc _o sf yo cg ep items-center space-x-7">
-            <li><a href="index.html" class="xl whitespace-nowrap" :class="{ 'mk': page === 'home' }">Inicio</a></li>
-            <li><a href="index.html#about" class="xl whitespace-nowrap">Nosotros</a></li>
-            <li><a href="index.html#eventos" class="xl whitespace-nowrap">Eventos</a></li>
-            <li><a href="index.html#productos" class="xl whitespace-nowrap">Productos</a></li>
-            <li class="min-w-max"><a href="index.html#produccion_ganadera" class="xl whitespace-nowrap">Campo Ganadero</a></li>
-            <li><a href="index.html#contacto" class="xl whitespace-nowrap">Contacto</a></li>
-          </ul>
-        </nav>
-      </div>
+      <!-- NAV -->
+<div class="nav-wrapper">
+
+  <!-- Desktop Menu -->
+  <nav class="desktop-nav">
+    <ul class="desktop-nav-list">
+      <li><a href="index.html" class="nav-link" :class="{ 'active-link': page === 'home' }">Inicio</a></li>
+      <li><a href="index.html#about" class="nav-link">Nosotros</a></li>
+      <li><a href="index.html#eventos" class="nav-link">Eventos</a></li>
+      <li><a href="index.html#productos" class="nav-link">Productos</a></li>
+      <li><a href="index.html#produccion_ganadera" class="nav-link">Campo Ganadero</a></li>
+      <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Overlay -->
+  <div class="mobile-overlay" :class="{ 'show': navigationOpen }" @click="navigationOpen = false"></div>
+
+  <!-- Mobile Menu -->
+  <nav class="mobile-nav" :class="{ 'open': navigationOpen }">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" @click="navigationOpen = false">Inicio</a></li>
+      <li><a href="index.html#about" @click="navigationOpen = false">Nosotros</a></li>
+      <li><a href="index.html#eventos" @click="navigationOpen = false">Eventos</a></li>
+      <li><a href="index.html#productos" @click="navigationOpen = false">Productos</a></li>
+      <li><a href="index.html#produccion_ganadera" @click="navigationOpen = false">Campo Ganadero</a></li>
+      <li><a href="index.html#contacto" @click="navigationOpen = false">Contacto</a></li>
+    </ul>
+  </nav>
+
+</div>
     </div>
   </header>
   <!-- ===== Header End ===== -->
